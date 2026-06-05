@@ -58,27 +58,26 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          scrolled
-            ? "bg-[#120022]/80 backdrop-blur-md border-b border-white/5 shadow-glow"
-            : "bg-transparent border-b border-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled
+          ? "bg-[#120022]/80 backdrop-blur-md border-b border-white/5 shadow-glow"
+          : "bg-transparent border-b border-transparent"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo and Tagline */}
             <div className="flex flex-col">
-              <Link href="/" className="flex items-center gap-2">
-                <div className="h-8 w-8 rounded-lg bg-gradient-to-tr from-[#A855F7] to-[#C084FC] flex items-center justify-center shadow-glow">
-                  <span className="text-white font-bold text-lg">S</span>
-                </div>
-                <span className="text-xl font-bold tracking-wider text-white">
-                  SYNEXIS
-                </span>
+              <Link href="/" className="flex items-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/Original.svg"
+                  alt="Synexis Technologies"
+                  className="h-[110px] w-auto object-contain"
+                />
               </Link>
-              <span className="hidden md:inline-block text-[10px] text-[#CFC8D8]/60 mt-0.5 tracking-tight">
+              {/* <span className="hidden md:inline-block text-[10px] text-[#CFC8D8]/60 mt-0.5 tracking-tight">
                 Engineering the Future Through Intelligent Technology
-              </span>
+              </span> */}
             </div>
 
             {/* Desktop Navigation */}
@@ -104,21 +103,20 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                   <Link
                     key={item.name}
                     href={item.path || "/"}
-                    className={`text-sm font-medium transition-colors ${
-                      isActive ? "text-[#C084FC] glow-text" : "text-[#CFC8D8] hover:text-white"
-                    }`}
+                    className={`text-sm font-medium transition-colors ${isActive ? "text-[#C084FC] glow-text" : "text-[#CFC8D8] hover:text-white"
+                      }`}
                   >
                     {item.name}
                   </Link>
                 );
               })}
 
-              <button
+              {/* <button
                 onClick={onOpenConsultation}
                 className="ml-4 bg-[#A855F7] hover:bg-[#B36CFF] text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 shadow-glow hover:shadow-glow-lg"
               >
                 Get Consultation
-              </button>
+              </button> */}
             </div>
 
             {/* Mobile menu button */}
@@ -301,10 +299,14 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
             >
               <div>
                 <div className="flex items-center justify-between mb-8">
-                  <div className="flex flex-col">
-                    <span className="text-xl font-bold tracking-wider text-white">SYNEXIS</span>
-                    <span className="text-[9px] text-[#CFC8D8]/60">Solutions & Engineering</span>
-                  </div>
+                  <Link href="/" onClick={() => setIsOpen(false)}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/Original.svg"
+                      alt="Synexis Technologies"
+                      className="h-14 w-auto object-contain"
+                    />
+                  </Link>
                   <button onClick={() => setIsOpen(false)} className="text-[#CFC8D8] hover:text-white p-2">
                     <X className="h-6 w-6" />
                   </button>
@@ -363,9 +365,8 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                         key={item.name}
                         href={item.path || "/"}
                         onClick={() => setIsOpen(false)}
-                        className={`block text-base font-semibold py-1.5 ${
-                          pathname === item.path ? "text-[#C084FC]" : "text-[#CFC8D8] hover:text-white"
-                        }`}
+                        className={`block text-base font-semibold py-1.5 ${pathname === item.path ? "text-[#C084FC]" : "text-[#CFC8D8] hover:text-white"
+                          }`}
                       >
                         {item.name}
                       </Link>
