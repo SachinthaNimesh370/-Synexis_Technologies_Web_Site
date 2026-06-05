@@ -1,13 +1,86 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { 
-  ArrowRight, Shield, Cpu, Layers, HelpCircle, HardDrive, 
-  Activity, Star, User2, MessageSquare, BookOpen, ShoppingBag, 
+import {
+  ArrowRight, Shield, Cpu, Layers, HelpCircle, HardDrive,
+  Activity, Star, User2, MessageSquare, BookOpen, ShoppingBag,
   Settings, Truck, Landmark, Building2, Briefcase, Coffee
 } from "lucide-react";
+
+// Animated stat counter component
+function AnimatedStat({ value, label, delay = 0 }: { value: string; label: string; delay?: number }) {
+  const [count, setCount] = useState(0);
+  const [visible, setVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  // Parse numeric part and suffix (e.g. "10+" => num=10, suffix="+")
+  const match = value.match(/^([\d.]+)(\/.*|[^\d.]*)$/);
+  const isSpecial = !match || value === "24/7";
+  const targetNum = match ? parseFloat(match[1]) : 0;
+  const suffix = match ? match[2] : "";
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.4 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!visible || isSpecial) return;
+    const duration = 1400;
+    const steps = 60;
+    const stepTime = duration / steps;
+    let current = 0;
+    const timer = setTimeout(() => {
+      const interval = setInterval(() => {
+        current += 1;
+        const progress = current / steps;
+        const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+        setCount(Math.round(eased * targetNum));
+        if (current >= steps) {
+          setCount(targetNum);
+          clearInterval(interval);
+        }
+      }, stepTime);
+    }, delay);
+    return () => clearTimeout(timer);
+  }, [visible, isSpecial, targetNum, delay]);
+
+  const displayValue = isSpecial
+    ? value
+    : `${Number.isInteger(targetNum) ? count : count.toFixed(1)}${suffix}`;
+
+  return (
+    <div ref={ref} className="space-y-1">
+      <motion.h3
+        initial={{ opacity: 0, y: 16 }}
+        animate={visible ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.5, delay: delay / 1000 }}
+        className="text-4xl md:text-5xl font-bold text-white tracking-tight"
+      >
+        {displayValue}
+      </motion.h3>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={visible ? { opacity: 1 } : {}}
+        transition={{ duration: 0.5, delay: delay / 1000 + 0.15 }}
+        className="text-xs md:text-sm text-[#CFC8D8]/70 font-semibold uppercase tracking-wider"
+      >
+        {label}
+      </motion.p>
+    </div>
+  );
+}
 
 export default function HomePage() {
   const triggerConsultation = () => {
@@ -15,7 +88,7 @@ export default function HomePage() {
   };
 
   const stats = [
-    { value: "100+", label: "Projects Delivered" },
+    { value: "10+", label: "Projects Delivered" },
     { value: "20+", label: "Business Solutions" },
     { value: "10+", label: "Technology Domains" },
     { value: "24/7", label: "Support" },
@@ -205,10 +278,12 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, i) => (
-              <div key={i} className="space-y-1">
-                <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight">{stat.value}</h3>
-                <p className="text-xs md:text-sm text-[#CFC8D8]/70 font-semibold uppercase tracking-wider">{stat.label}</p>
-              </div>
+              <AnimatedStat
+                key={i}
+                value={stat.value}
+                label={stat.label}
+                delay={i * 120}
+              />
             ))}
           </div>
         </div>
