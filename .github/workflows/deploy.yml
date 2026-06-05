@@ -26,6 +26,10 @@ jobs:
 
             git pull origin main
 
+            # Inject Environment Variables from GitHub Secrets
+            echo "EMAIL_USER=${{ secrets.EMAIL_USER }}" > .env.local
+            echo "EMAIL_PASS=${{ secrets.EMAIL_PASS }}" >> .env.local
+
             npm install
 
             npm run build
