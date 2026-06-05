@@ -9,14 +9,14 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Synexis Technologies | Software, AI & Engineering Solutions",
-  description: "Synexis Technologies provides enterprise software, AI engineering, automation, ERP systems, PLC, PCB design, and long-term technology support.",
+  title: "Zynovra Technologies | Software, AI & Engineering Solutions",
+  description: "Zynovra Technologies provides enterprise software, AI engineering, automation, ERP systems, PLC, PCB design, and long-term technology support.",
   keywords: "enterprise software, AI engineering, industrial automation, ERP, PLC, PCB design, tech support, custom software",
   icons: {
     icon: "/Logo.svg",
   },
   openGraph: {
-    title: "Synexis Technologies | Software, AI & Engineering Solutions",
+    title: "Zynovra Technologies | Software, AI & Engineering Solutions",
     description: "Enterprise software, AI engineering, automation, ERP systems, PLC, PCB design, and long-term technology support.",
     type: "website",
   }

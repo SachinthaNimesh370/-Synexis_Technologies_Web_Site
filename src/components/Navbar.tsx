@@ -71,7 +71,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/Original.svg"
-                  alt="Synexis Technologies"
+                  alt="Zynovra Technologies"
                   className="h-[110px] w-auto object-contain"
                 />
               </Link>
@@ -241,31 +241,31 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                 <div className="col-span-3 grid grid-cols-3 gap-6">
                   <div className="space-y-4">
                     <Link href="/products#hrm" className="group block">
-                      <h5 className="text-white group-hover:text-[#A855F7] font-semibold text-sm transition-colors">Synexis HRM</h5>
+                      <h5 className="text-white group-hover:text-[#A855F7] font-semibold text-sm transition-colors">Zynovra HRM</h5>
                       <p className="text-[#CFC8D8]/60 text-xs mt-1">Human Resource Management Platform</p>
                     </Link>
                     <Link href="/products#ims" className="group block">
-                      <h5 className="text-white group-hover:text-[#A855F7] font-semibold text-sm transition-colors">Synexis IMS</h5>
+                      <h5 className="text-white group-hover:text-[#A855F7] font-semibold text-sm transition-colors">Zynovra IMS</h5>
                       <p className="text-[#CFC8D8]/60 text-xs mt-1">Inventory Management Platform</p>
                     </Link>
                   </div>
                   <div className="space-y-4">
                     <Link href="/products#lms" className="group block">
-                      <h5 className="text-white group-hover:text-[#A855F7] font-semibold text-sm transition-colors">Synexis LMS</h5>
+                      <h5 className="text-white group-hover:text-[#A855F7] font-semibold text-sm transition-colors">Zynovra LMS</h5>
                       <p className="text-[#CFC8D8]/60 text-xs mt-1">Learning Management Platform</p>
                     </Link>
                     <Link href="/products#pos" className="group block">
-                      <h5 className="text-white group-hover:text-[#A855F7] font-semibold text-sm transition-colors">Synexis POS</h5>
+                      <h5 className="text-white group-hover:text-[#A855F7] font-semibold text-sm transition-colors">Zynovra POS</h5>
                       <p className="text-[#CFC8D8]/60 text-xs mt-1">Modern POS Solution</p>
                     </Link>
                   </div>
                   <div className="space-y-4">
                     <Link href="/products#erp" className="group block">
-                      <h5 className="text-white group-hover:text-[#A855F7] font-semibold text-sm transition-colors">Synexis ERP</h5>
+                      <h5 className="text-white group-hover:text-[#A855F7] font-semibold text-sm transition-colors">Zynovra ERP</h5>
                       <p className="text-[#CFC8D8]/60 text-xs mt-1">Enterprise Resource Planning</p>
                     </Link>
                     <Link href="/products#monitoring" className="group block">
-                      <h5 className="text-white group-hover:text-[#A855F7] font-semibold text-sm transition-colors">Synexis Smart Monitoring</h5>
+                      <h5 className="text-white group-hover:text-[#A855F7] font-semibold text-sm transition-colors">Zynovra Smart Monitoring</h5>
                       <p className="text-[#CFC8D8]/60 text-xs mt-1">IoT and system status overview</p>
                     </Link>
                   </div>
@@ -303,7 +303,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src="/Original.svg"
-                      alt="Synexis Technologies"
+                      alt="Zynovra Technologies"
                       className="h-14 w-auto object-contain"
                     />
                   </Link>
@@ -348,11 +348,11 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                           </button>
                           {activeDropdown === "products" && (
                             <div className="pl-4 space-y-2 border-l border-white/5 text-sm text-[#CFC8D8]/80">
-                              <Link href="/products#hrm" className="block py-1 hover:text-white">Synexis HRM</Link>
-                              <Link href="/products#ims" className="block py-1 hover:text-white">Synexis IMS</Link>
-                              <Link href="/products#lms" className="block py-1 hover:text-white">Synexis LMS</Link>
-                              <Link href="/products#pos" className="block py-1 hover:text-white">Synexis POS</Link>
-                              <Link href="/products#erp" className="block py-1 hover:text-white">Synexis ERP</Link>
+                              <Link href="/products#hrm" className="block py-1 hover:text-white">Zynovra HRM</Link>
+                              <Link href="/products#ims" className="block py-1 hover:text-white">Zynovra IMS</Link>
+                              <Link href="/products#lms" className="block py-1 hover:text-white">Zynovra LMS</Link>
+                              <Link href="/products#pos" className="block py-1 hover:text-white">Zynovra POS</Link>
+                              <Link href="/products#erp" className="block py-1 hover:text-white">Zynovra ERP</Link>
                               <Link href="/products" className="block py-1 text-[#C084FC]">View All Products</Link>
                             </div>
                           )}

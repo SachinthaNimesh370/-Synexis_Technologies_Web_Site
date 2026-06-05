@@ -142,13 +142,13 @@ export default function HomePage() {
 
   const testimonials = [
     {
-      quote: "Synexis Technologies transformed our legacy systems into a modern, cloud-native ERP. Their technical precision and support are unmatched.",
+      quote: "Zynovra Technologies transformed our legacy systems into a modern, cloud-native ERP. Their technical precision and support are unmatched.",
       author: "Robert Chen",
       role: "Chief Technology Officer",
       company: "Apex Global Logistics",
     },
     {
-      quote: "The AI-driven predictive maintenance monitoring system designed by Synexis has decreased our factory downtime by over 34% this fiscal year.",
+      quote: "The AI-driven predictive maintenance monitoring system designed by Zynovra has decreased our factory downtime by over 34% this fiscal year.",
       author: "Elena Rostova",
       role: "Director of Operations",
       company: "Siemen Manufacturing Corp",
@@ -235,8 +235,8 @@ export default function HomePage() {
             >
               {/* Nodes and Lines layout */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="absolute w-[280px] h-[280px] rounded-full border border-dashed border-white/10 animate-spin" style={{ animationDuration: "40s" }} />
-                <div className="absolute w-[180px] h-[180px] rounded-full border border-dashed border-white/20 animate-spin" style={{ animationDuration: "20s", animationDirection: "reverse" }} />
+                <div className="absolute w-[280px] h-[280px] rounded-full border border-dashed border-white/50 animate-spin" style={{ animationDuration: "40s" }} />
+                <div className="absolute w-[180px] h-[180px] rounded-full border border-dashed border-white/70 animate-spin" style={{ animationDuration: "20s", animationDirection: "reverse" }} />
               </div>
 
               {/* Central Glowing Core */}
@@ -245,7 +245,7 @@ export default function HomePage() {
                   <Cpu className="h-10 w-10 text-[#C084FC]" />
                 </div>
                 <div className="text-center">
-                  <h4 className="text-white font-bold tracking-wide">SYNEXIS CORE</h4>
+                  <h4 className="text-white font-bold tracking-wide">ZYNOVRA CORE</h4>
                   <p className="text-[10px] text-[#CFC8D8]/50">SECURE NODE ACTIVE</p>
                 </div>
               </div>
@@ -292,7 +292,7 @@ export default function HomePage() {
       {/* Why Choose Us Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-16">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">Why Corporate Leaders Choose Synexis</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">Why Corporate Leaders Choose Zynovra</h2>
           <p className="text-[#CFC8D8] max-w-xl mx-auto text-sm leading-relaxed">
             We bridge the gap between complex software, cutting-edge intelligence, and high-performance physical hardware.
           </p>
@@ -339,22 +339,22 @@ export default function HomePage() {
 
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="glow-card p-6">
-              <h4 className="text-white font-bold mb-1">Synexis ERP</h4>
+              <h4 className="text-white font-bold mb-1">Zynovra ERP</h4>
               <p className="text-[#CFC8D8]/60 text-xs mb-4">Core Enterprise Resource Planning engine.</p>
               <Link href="/products#erp" className="text-xs text-[#C084FC] hover:text-white font-semibold">Explore Plan &rarr;</Link>
             </div>
             <div className="glow-card p-6">
-              <h4 className="text-white font-bold mb-1">Synexis HRM</h4>
+              <h4 className="text-white font-bold mb-1">Zynovra HRM</h4>
               <p className="text-[#CFC8D8]/60 text-xs mb-4">Human Resource Management Platform.</p>
               <Link href="/products#hrm" className="text-xs text-[#C084FC] hover:text-white font-semibold">Explore Plan &rarr;</Link>
             </div>
             <div className="glow-card p-6">
-              <h4 className="text-white font-bold mb-1">Synexis POS</h4>
+              <h4 className="text-white font-bold mb-1">Zynovra POS</h4>
               <p className="text-[#CFC8D8]/60 text-xs mb-4">Modern POS Solution for digital terminals.</p>
               <Link href="/products#pos" className="text-xs text-[#C084FC] hover:text-white font-semibold">Explore Plan &rarr;</Link>
             </div>
             <div className="glow-card p-6">
-              <h4 className="text-white font-bold mb-1">Synexis AI Assistant</h4>
+              <h4 className="text-white font-bold mb-1">Zynovra AI Assistant</h4>
               <p className="text-[#CFC8D8]/60 text-xs mb-4">Intelligent workflow and automation copilot.</p>
               <Link href="/products#assistant" className="text-xs text-[#C084FC] hover:text-white font-semibold">Explore Plan &rarr;</Link>
             </div>

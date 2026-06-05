@@ -33,7 +33,7 @@ export default function AboutPage() {
   ];
 
   const milestones = [
-    { year: "2018", title: "Synexis Inception", desc: "Founded with a focus on custom ERP engineering and PLC automation modules." },
+    { year: "2018", title: "Zynovra Inception", desc: "Founded with a focus on custom ERP engineering and PLC automation modules." },
     { year: "2020", title: "AI Division Established", desc: "Launched predictive analytics engines and custom computer vision systems for factories." },
     { year: "2022", title: "Global Expansion", desc: "Opened secondary office hubs and expanded support operations to 24/7 coverage." },
     { year: "2025", title: "Enterprise Leadership", desc: "Reached 100+ successfully delivered global software and hardware deployments." },
@@ -88,7 +88,7 @@ export default function AboutPage() {
             transition={{ delay: 0.2 }}
             className="text-base sm:text-lg text-[#CFC8D8] leading-relaxed"
           >
-            Synexis Technologies partners with global companies to build, automate, and scale their digital operations. From enterprise resource planners to AI systems and specialized hardware, we create robust technology that lasts.
+            Zynovra Technologies partners with global companies to build, automate, and scale their digital operations. From enterprise resource planners to AI systems and specialized hardware, we create robust technology that lasts.
           </motion.p>
         </section>
 

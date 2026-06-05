@@ -11,14 +11,33 @@ interface FooterProps {
 export default function Footer({ onOpenConsultation }: FooterProps) {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setTimeout(() => {
-        setEmail("");
-      }, 2000);
+    if (!email) return;
+    
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, type: "newsletter" }),
+      });
+      if (response.ok) {
+        setSubscribed(true);
+        setTimeout(() => {
+          setEmail("");
+          setSubscribed(false);
+        }, 5000);
+      } else {
+        alert("Subscription failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error subscribing:", error);
+      alert("An error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -32,7 +51,7 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/Original.svg"
-                alt="Synexis Technologies"
+                alt="Zynovra Technologies"
                 className="h-[110px] w-auto object-contain"
               />
             </Link>
@@ -55,9 +74,14 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
                   />
                   <button
                     type="submit"
-                    className="bg-[#A855F7] hover:bg-[#B36CFF] text-white p-2.5 rounded-lg transition-colors flex items-center justify-center"
+                    disabled={isSubmitting}
+                    className="bg-[#A855F7] hover:bg-[#B36CFF] text-white p-2.5 rounded-lg transition-colors flex items-center justify-center disabled:opacity-50"
                   >
-                    <ArrowRight className="h-4 w-4" />
+                    {isSubmitting ? (
+                      <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                    ) : (
+                      <ArrowRight className="h-4 w-4" />
+                    )}
                   </button>
                 </form>
               ) : (
@@ -85,9 +109,9 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
             <h4 className="text-sm font-semibold text-white tracking-wider uppercase">Solutions</h4>
             <ul className="space-y-2 text-sm text-[#CFC8D8]/70">
               <li><Link href="/services#erp" className="hover:text-white transition-colors">ERP Systems</Link></li>
-              <li><Link href="/products#hrm" className="hover:text-white transition-colors">Synexis HRM</Link></li>
-              <li><Link href="/products#ims" className="hover:text-white transition-colors">Synexis IMS</Link></li>
-              <li><Link href="/products#pos" className="hover:text-white transition-colors">Synexis POS</Link></li>
+              <li><Link href="/products#hrm" className="hover:text-white transition-colors">Zynovra HRM</Link></li>
+              <li><Link href="/products#ims" className="hover:text-white transition-colors">Zynovra IMS</Link></li>
+              <li><Link href="/products#pos" className="hover:text-white transition-colors">Zynovra POS</Link></li>
             </ul>
           </div>
 
@@ -120,7 +144,7 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
         {/* Divider */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-[#CFC8D8]/50">
-            &copy; 2026 Synexis Technologies. All Rights Reserved.
+            &copy; 2026 Zynovra Technologies. All Rights Reserved.
           </p>
           <div className="flex gap-4">
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-[#CFC8D8]/50 hover:text-white transition-colors p-1 hover:bg-white/5 rounded">
