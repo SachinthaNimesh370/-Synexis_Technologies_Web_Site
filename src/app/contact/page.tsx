@@ -8,14 +8,27 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...formData, type: "contact" }),
+      });
+      if (response.ok) {
+        setIsSuccess(true);
+        setFormData({ name: "", email: "", company: "", message: "" });
+      } else {
+        alert("Failed to send request. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again.");
+    } finally {
       setIsSubmitting(false);
-      setIsSuccess(true);
-      setFormData({ name: "", email: "", company: "", message: "" });
-    }, 1500);
+    }
   };
 
   return (
@@ -49,8 +62,8 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 className="text-white font-semibold text-sm">Corporate Inquiry</h4>
-                <p className="text-xs text-[#CFC8D8]/70 mt-1">inquire@synexis.com</p>
-                <p className="text-xs text-[#CFC8D8]/70">partners@synexis.com</p>
+                <p className="text-xs text-[#CFC8D8]/70 mt-1">inquire@zynovra.com</p>
+                <p className="text-xs text-[#CFC8D8]/70">partners@zynovra.com</p>
               </div>
             </div>
 
@@ -81,7 +94,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 className="text-white font-semibold text-sm">Offices Location</h4>
-                <p className="text-xs text-[#CFC8D8]/70 mt-1">Synexis Towers, Floor 14-16, Downtown Cyber City.</p>
+                <p className="text-xs text-[#CFC8D8]/70 mt-1">Zynovra Towers, Floor 14-16, Downtown Cyber City.</p>
               </div>
             </div>
 

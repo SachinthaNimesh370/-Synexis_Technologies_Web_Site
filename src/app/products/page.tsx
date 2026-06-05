@@ -18,7 +18,7 @@ export default function ProductsPage() {
   const products: Product[] = [
     {
       id: "erp",
-      title: "Synexis ERP",
+      title: "Zynovra ERP",
       subtitle: "Enterprise Resource Planning Engine",
       desc: "Streamline accounting, procurement, project management, and supply chain processes in a unified framework.",
       icon: Shield,
@@ -31,7 +31,7 @@ export default function ProductsPage() {
     },
     {
       id: "hrm",
-      title: "Synexis HRM",
+      title: "Zynovra HRM",
       subtitle: "Human Resource Management Platform",
       desc: "Unify payroll, attendance tracking, compliance, performance appraisal, and digital onboarding on one dashboard.",
       icon: Users,
@@ -44,7 +44,7 @@ export default function ProductsPage() {
     },
     {
       id: "ims",
-      title: "Synexis IMS",
+      title: "Zynovra IMS",
       subtitle: "Inventory Management Platform",
       desc: "Track stock, automate warehouse refilling alerts, manage vendors, and analyze dispatch history instantly.",
       icon: Package,
@@ -57,7 +57,7 @@ export default function ProductsPage() {
     },
     {
       id: "lms",
-      title: "Synexis LMS",
+      title: "Zynovra LMS",
       subtitle: "Learning Management Platform",
       desc: "Deliver training modules, track completion certifications, and host digital courses for employees.",
       icon: BookOpen,
@@ -70,7 +70,7 @@ export default function ProductsPage() {
     },
     {
       id: "pos",
-      title: "Synexis POS",
+      title: "Zynovra POS",
       subtitle: "Modern Retail Point of Sale",
       desc: "Fast, intuitive checkouts with real-time sync to inventory. Designed for offline capability and card readers.",
       icon: CreditCard,
@@ -83,7 +83,7 @@ export default function ProductsPage() {
     },
     {
       id: "monitoring",
-      title: "Synexis Smart Monitoring",
+      title: "Zynovra Smart Monitoring",
       subtitle: "IoT Infrastructure & Systems Analytics",
       desc: "Gain deep operational visibility. Monitor machinery status, temperature sensors, and remote deployments.",
       icon: Activity,
@@ -96,7 +96,7 @@ export default function ProductsPage() {
     },
     {
       id: "assistant",
-      title: "Synexis AI Assistant",
+      title: "Zynovra AI Assistant",
       subtitle: "Intelligent Corporate Copilot",
       desc: "Inject natural language intelligence. Query reports, drafts, documents, and support channels using custom LLMs.",
       icon: Cpu,

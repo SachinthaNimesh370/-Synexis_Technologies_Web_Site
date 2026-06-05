@@ -33,7 +33,7 @@ export default function IndustriesPage() {
       icon: BookOpen,
       desc: "Architecting interactive virtual academies, gradebooks tracking engines, and custom student data centers.",
       useCase: "LMS systems hosting certification logs for large technical institutions.",
-      solutions: ["Synexis LMS Engine", "Interactive Grading Dashboards", "SCORM Compliant Assets"]
+      solutions: ["Zynovra LMS Engine", "Interactive Grading Dashboards", "SCORM Compliant Assets"]
     },
     {
       id: "retail",
@@ -41,7 +41,7 @@ export default function IndustriesPage() {
       icon: ShoppingBag,
       desc: "Building offline-capable Point of Sale terminals and synchronized inventory databases across multiple physical branches.",
       useCase: "Live checkout and inventory syncing across a chain of department stores.",
-      solutions: ["Synexis POS Terminals", "Multi-Warehouse Inventory Sync", "Custom Loyalty Engines"]
+      solutions: ["Zynovra POS Terminals", "Multi-Warehouse Inventory Sync", "Custom Loyalty Engines"]
     },
     {
       id: "manufacturing",
@@ -57,7 +57,7 @@ export default function IndustriesPage() {
       icon: Truck,
       desc: "Tracking assets from port to final warehouse. Automated dispatch schedulers, vehicle sensors, and vendor portals.",
       useCase: "Real-time fleet tracking and multi-warehouse supply chain dashboards.",
-      solutions: ["Synexis IMS Warehousing", "Automated Fleet Telemetry Modules", "Vendor Ordering Portals"]
+      solutions: ["Zynovra IMS Warehousing", "Automated Fleet Telemetry Modules", "Vendor Ordering Portals"]
     },
     {
       id: "finance",

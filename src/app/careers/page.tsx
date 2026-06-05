@@ -82,7 +82,7 @@ export default function CareersPage() {
             CAREERS
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
-            Build the Future With Synexis
+            Build the Future With Zynovra
           </h1>
           <p className="text-[#CFC8D8] text-base sm:text-lg">
             Join an elite engineering culture dedicated to designing next-generation software, embedded hardware circuits, and AI models.
