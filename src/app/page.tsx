@@ -142,7 +142,7 @@ export default function HomePage() {
 
   const testimonials = [
     {
-      quote: "Zynovra Technologies transformed our legacy systems into a modern, cloud-native ERP. Their technical precision and support are unmatched.",
+      quote: "ZYNOVRA TECHNOLOGIES (PVT) LTD transformed our legacy systems into a modern, cloud-native ERP. Their technical precision and support are unmatched.",
       author: "Robert Chen",
       role: "Chief Technology Officer",
       company: "Apex Global Logistics",
@@ -292,7 +292,7 @@ export default function HomePage() {
       {/* Why Choose Us Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-16">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">Why Corporate Leaders Choose Zynovra</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">Why Corporate Leaders Choose ZYNOVRA TECHNOLOGIES (PVT) LTD</h2>
           <p className="text-[#CFC8D8] max-w-xl mx-auto text-sm leading-relaxed">
             We bridge the gap between complex software, cutting-edge intelligence, and high-performance physical hardware.
           </p>

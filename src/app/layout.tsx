@@ -9,14 +9,14 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Zynovra Technologies | Software, AI & Engineering Solutions",
-  description: "Zynovra Technologies provides enterprise software, AI engineering, automation, ERP systems, PLC, PCB design, and long-term technology support.",
+  title: "ZYNOVRA TECHNOLOGIES (PVT) LTD | Software, AI & Engineering Solutions",
+  description: "ZYNOVRA TECHNOLOGIES (PVT) LTD provides enterprise software, AI engineering, automation, ERP systems, PLC, PCB design, and long-term technology support.",
   keywords: "enterprise software, AI engineering, industrial automation, ERP, PLC, PCB design, tech support, custom software",
   icons: {
     icon: "/Logo.svg",
   },
   openGraph: {
-    title: "Zynovra Technologies | Software, AI & Engineering Solutions",
+    title: "ZYNOVRA TECHNOLOGIES (PVT) LTD | Software, AI & Engineering Solutions",
     description: "Enterprise software, AI engineering, automation, ERP systems, PLC, PCB design, and long-term technology support.",
     type: "website",
   }

@@ -71,7 +71,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/Original.svg"
-                  alt="Zynovra Technologies"
+                  alt="ZYNOVRA TECHNOLOGIES (PVT) LTD"
                   className="h-[110px] w-auto object-contain"
                 />
               </Link>
@@ -303,7 +303,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src="/Original.svg"
-                      alt="Zynovra Technologies"
+                      alt="ZYNOVRA TECHNOLOGIES (PVT) LTD"
                       className="h-14 w-auto object-contain"
                     />
                   </Link>

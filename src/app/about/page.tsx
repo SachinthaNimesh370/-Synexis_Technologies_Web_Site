@@ -33,27 +33,30 @@ export default function AboutPage() {
   ];
 
   const milestones = [
-    { year: "2018", title: "Zynovra Inception", desc: "Founded with a focus on custom ERP engineering and PLC automation modules." },
-    { year: "2020", title: "AI Division Established", desc: "Launched predictive analytics engines and custom computer vision systems for factories." },
-    { year: "2022", title: "Global Expansion", desc: "Opened secondary office hubs and expanded support operations to 24/7 coverage." },
-    { year: "2025", title: "Enterprise Leadership", desc: "Reached 100+ successfully delivered global software and hardware deployments." },
+    { year: "2025", title: "Company Inception", desc: "ZYNOVRA TECHNOLOGIES (PVT) LTD was founded to bridge the gap between enterprise software and advanced hardware solutions." },
+    { year: "2025", title: "First Enterprise Projects", desc: "Successfully delivered our initial custom software systems, setting a high standard for reliability." },
+    { year: "2026", title: "Expanding Capabilities", desc: "Introduced dedicated AI automation divisions and expanded our hardware prototyping services." },
+    { year: "2026", title: "Accelerated Growth", desc: "Scaling our engineering teams and operational capacity to handle larger corporate deployments." },
   ];
 
   const leaders = [
     {
-      name: "Dr. Alistair Vance",
-      role: "Chief Executive Officer",
-      bio: "Former Enterprise Architect at IBM and Siemens with 20+ years of industrial hardware-software experience.",
+      name: "Sachintha Nimesh",
+      role: "Chief Executive Officer & Computer Engineer",
+      bio: "Visionary leader driving innovation in enterprise systems and advanced computing architectures. Dedicated to delivering cutting-edge technology.",
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80",
     },
     {
-      name: "Sarah Jenkins, MSc",
-      role: "Chief Technology Officer",
-      bio: "Expert in distributed cloud architecture, database concurrency, and high-frequency AI models.",
+      name: "Satharaka Nilmantha",
+      role: "Chief Technology Officer & Computer Engineer",
+      bio: "Expert in distributed cloud architecture, database concurrency, and high-frequency AI models. Bringing state-of-the-art engineering to complex problems.",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
     },
     {
-      name: "David K. Cho",
-      role: "VP of Engineering Solutions",
-      bio: "20+ years designing custom embedded boards, PCB layouts, and automated PLC control systems.",
+      name: "Tharindu Thilakarathna",
+      role: "VP of Engineering Solutions | Electrical & Electronic Engineer",
+      bio: "Dedicated expert designing custom embedded boards, PCB layouts, and automated PLC control systems ensuring unmatched operational reliability.",
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80",
     },
   ];
 
@@ -88,7 +91,7 @@ export default function AboutPage() {
             transition={{ delay: 0.2 }}
             className="text-base sm:text-lg text-[#CFC8D8] leading-relaxed"
           >
-            Zynovra Technologies partners with global companies to build, automate, and scale their digital operations. From enterprise resource planners to AI systems and specialized hardware, we create robust technology that lasts.
+            ZYNOVRA TECHNOLOGIES (PVT) LTD partners with global companies to build, automate, and scale their digital operations. From enterprise resource planners to AI systems and specialized hardware, we create robust technology that lasts.
           </motion.p>
         </section>
 
@@ -151,10 +154,15 @@ export default function AboutPage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-white text-center">Executive Leadership</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {leaders.map((leader, i) => (
-              <div key={i} className="glow-card p-6 flex flex-col justify-between">
-                <div className="space-y-3">
-                  <h4 className="text-white font-bold text-base">{leader.name}</h4>
-                  <span className="text-xs font-semibold text-[#A855F7] tracking-wider uppercase">{leader.role}</span>
+              <div key={i} className="glow-card p-6 flex flex-col justify-between items-center text-center">
+                <div className="space-y-4 w-full">
+                  <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#A855F7] shadow-glow mx-auto mb-4">
+                    <img src={leader.image} alt={leader.name} className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-base">{leader.name}</h4>
+                    <span className="text-[10px] sm:text-xs font-semibold text-[#A855F7] tracking-wider uppercase block mt-1">{leader.role}</span>
+                  </div>
                   <p className="text-xs text-[#CFC8D8]/70 leading-relaxed pt-2">{leader.bio}</p>
                 </div>
               </div>
