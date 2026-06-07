@@ -51,7 +51,7 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/Original.svg"
-                alt="Zynovra Technologies"
+                alt="ZYNOVRA TECHNOLOGIES (PVT) LTD"
                 className="h-[110px] w-auto object-contain"
               />
             </Link>
@@ -144,7 +144,7 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
         {/* Divider */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-[#CFC8D8]/50">
-            &copy; 2026 Zynovra Technologies. All Rights Reserved.
+            &copy; 2026 ZYNOVRA TECHNOLOGIES (PVT) LTD. All Rights Reserved.
           </p>
           <div className="flex gap-4">
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-[#CFC8D8]/50 hover:text-white transition-colors p-1 hover:bg-white/5 rounded">
