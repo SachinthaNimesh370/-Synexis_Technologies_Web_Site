@@ -44,19 +44,19 @@ export default function AboutPage() {
       name: "Sachintha Nimesh",
       role: "Chief Executive Officer & Computer Engineer",
       bio: "Visionary leader driving innovation in enterprise systems and advanced computing architectures. Dedicated to delivering cutting-edge technology.",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80",
+      image: "/Sachintha Nimesh.png",
     },
     {
       name: "Satharaka Nilmantha",
       role: "Chief Technology Officer & Computer Engineer",
       bio: "Expert in distributed cloud architecture, database concurrency, and high-frequency AI models. Bringing state-of-the-art engineering to complex problems.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+      image: "/Satharaka Nilmantha.jpeg",
     },
     {
       name: "Tharindu Thilakarathna",
       role: "VP of Engineering Solutions | Electrical & Electronic Engineer",
       bio: "Dedicated expert designing custom embedded boards, PCB layouts, and automated PLC control systems ensuring unmatched operational reliability.",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80",
+      image: "/Tharindu Thilakarathna.jpeg",
     },
   ];
 
