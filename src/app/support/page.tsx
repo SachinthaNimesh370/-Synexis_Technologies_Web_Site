@@ -25,7 +25,7 @@ export default function SupportPage() {
   const plans = [
     {
       name: "Basic Support",
-      price: "$1,200",
+      price: "Rs 15 000.00",
       period: "monthly",
       desc: "For non-critical websites needing standard maintenance, backup logs, and basic updates.",
       features: [
@@ -38,7 +38,7 @@ export default function SupportPage() {
     },
     {
       name: "Professional Support",
-      price: "$3,500",
+      price: "Rs 50 000.00",
       period: "monthly",
       desc: "For active e-commerce and internal tools requiring fast response SLAs and active system monitoring.",
       features: [
@@ -133,11 +133,10 @@ export default function SupportPage() {
             {plans.map((plan, index) => (
               <div
                 key={index}
-                className={`relative rounded-2xl p-8 border flex flex-col justify-between min-h-[500px] transition-all ${
-                  plan.featured
+                className={`relative rounded-2xl p-8 border flex flex-col justify-between min-h-[500px] transition-all ${plan.featured
                     ? "bg-[#22023F] border-[#A855F7] shadow-glow"
                     : "bg-[#1B0133]/60 border-white/10"
-                }`}
+                  }`}
               >
                 {plan.featured && (
                   <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#A855F7] text-white px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase">
@@ -169,11 +168,10 @@ export default function SupportPage() {
                 <div className="pt-8">
                   <button
                     onClick={triggerConsultation}
-                    className={`w-full py-3 rounded-lg font-semibold text-center text-sm transition-all ${
-                      plan.featured
+                    className={`w-full py-3 rounded-lg font-semibold text-center text-sm transition-all ${plan.featured
                         ? "bg-[#A855F7] hover:bg-[#B36CFF] text-white shadow-glow"
                         : "border border-white/10 bg-[#22023F]/50 text-white hover:border-[#A855F7]"
-                    }`}
+                      }`}
                   >
                     Select Plan SLA
                   </button>
