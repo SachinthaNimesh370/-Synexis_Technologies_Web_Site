@@ -62,8 +62,11 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 className="text-white font-semibold text-sm">Corporate Inquiry</h4>
-                <p className="text-xs text-[#CFC8D8]/70 mt-1">inquire@zynovra.com</p>
-                <p className="text-xs text-[#CFC8D8]/70">partners@zynovra.com</p>
+                <p className="text-xs text-[#CFC8D8]/70 mt-1">
+                  <a href="mailto:zynovratechnologies@gmail.com" className="hover:text-white transition-colors">
+                    zynovratechnologies@gmail.com
+                  </a>
+                </p>
               </div>
             </div>
 
@@ -73,8 +76,11 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 className="text-white font-semibold text-sm">Telephony Hotline</h4>
-                <p className="text-xs text-[#CFC8D8]/70 mt-1">+1 (800) 555-0199 (HQ Toll-Free)</p>
-                <p className="text-xs text-[#CFC8D8]/70">+94 11 234 5678 (Asia Support Hub)</p>
+                <p className="text-xs text-[#CFC8D8]/70 mt-1">
+                  <a href="tel:+94776530084" className="hover:text-white transition-colors">
+                    +94 77 653 0084
+                  </a>
+                </p>
               </div>
             </div>
 
@@ -84,7 +90,16 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 className="text-white font-semibold text-sm">Instant Chat Messenger</h4>
-                <p className="text-xs text-[#CFC8D8]/70 mt-1">WhatsApp Business: +1 (800) 555-0190</p>
+                <p className="text-xs text-[#CFC8D8]/70 mt-1">
+                  <a
+                    href="https://wa.me/94776530084"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors inline-flex items-center gap-1 font-medium text-[#D8B4FE]"
+                  >
+                    WhatsApp Chat: +94 77 653 0084
+                  </a>
+                </p>
               </div>
             </div>
 
@@ -94,18 +109,20 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 className="text-white font-semibold text-sm">Offices Location</h4>
-                <p className="text-xs text-[#CFC8D8]/70 mt-1">Zynovra Towers, Floor 14-16, Downtown Cyber City.</p>
+                <p className="text-xs text-[#CFC8D8]/70 mt-1">Manuwangama/E, Chilaw.</p>
               </div>
             </div>
 
-            {/* Google Map Placeholder */}
-            <div className="relative h-60 w-full bg-[#1B0133] border border-white/10 rounded-xl overflow-hidden flex items-center justify-center">
-              <div className="absolute inset-0 grid-bg opacity-30" />
-              <div className="relative z-10 text-center space-y-2">
-                <MapPin className="h-8 w-8 text-[#A855F7] mx-auto animate-bounce" />
-                <h5 className="text-xs font-bold text-white uppercase tracking-wider">Downtown Cyber City</h5>
-                <p className="text-[10px] text-[#CFC8D8]/50">34.0522&deg; N, 118.2437&deg; W</p>
-              </div>
+            {/* Google Map */}
+            <div className="relative h-60 w-full bg-[#1B0133] border border-white/10 rounded-xl overflow-hidden shadow-inner">
+              <iframe
+                title="Chilaw Location Map"
+                src="https://maps.google.com/maps?q=Chilaw,%20Sri%20Lanka&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                className="absolute inset-0 w-full h-full border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
 
